@@ -3,6 +3,8 @@
 import React from 'react';
 import '@/lib/env';
 
+import Scene from '@/components/Scene';
+
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -12,5 +14,9 @@ import '@/lib/env';
  */
 
 export default function HomePage() {
-  return <main></main>;
+  return (
+    <main className='relative h-screen'>
+      <Scene />
+    </main>
+  );
 }
