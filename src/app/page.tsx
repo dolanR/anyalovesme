@@ -1,7 +1,8 @@
 'use client';
 
+import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import React from 'react';
+import React, { useRef } from 'react';
 import '@/lib/env';
 
 /**
@@ -17,11 +18,28 @@ const Scene = dynamic(() => import('@/components/Scene'), {
 });
 
 export default function HomePage() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 0', '1 0.4'],
+  });
+  const opacity = useTransform(scrollYProgress, [0.6, 1], [1, 0]);
+  const y = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5],
+    [0, -50, -120, -200, -260, -300]
+  );
   return (
-    <main className='bg-html h-screen w-screen bg-cover bg-center bg-no-repeat box-border'>
-      <section className='h-screen'></section>
-      <section className='sticky h-screen w-screen bg-blue-50'></section>
-      <section className='h-screen bg-red-200'>
+    <main>
+      <div className='w-screen h-screen relative '>
+        <motion.div
+          ref={ref}
+          style={{ opacity, y }}
+          className='bg-html fixed h-[150vh] w-screen bg-center bg-no-repeat bg-cover'
+        ></motion.div>
+      </div>
+      <section className='h-screen relative '></section>
+      <section className='h-screen relative '>
         <Scene />
       </section>
     </main>
