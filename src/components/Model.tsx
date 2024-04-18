@@ -2,7 +2,7 @@
 import { useGLTF } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import React, { useEffect, useRef } from 'react';
-import { Group } from 'three';
+import { Group, Mesh } from 'three';
 
 export default function Model(props: any) {
   const { nodes, materials } = useGLTF('/media/scene.glb');
@@ -36,73 +36,73 @@ export default function Model(props: any) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0.geometry}
+            geometry={(nodes.Model_material0_0 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_1.geometry}
+            geometry={(nodes.Model_material0_0_1 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_2.geometry}
+            geometry={(nodes.Model_material0_0_2 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_3.geometry}
+            geometry={(nodes.Model_material0_0_3 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_4.geometry}
+            geometry={(nodes.Model_material0_0_4 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_5.geometry}
+            geometry={(nodes.Model_material0_0_5 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_6.geometry}
+            geometry={(nodes.Model_material0_0_6 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_7.geometry}
+            geometry={(nodes.Model_material0_0_7 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_8.geometry}
+            geometry={(nodes.Model_material0_0_8 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_9.geometry}
+            geometry={(nodes.Model_material0_0_9 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_10.geometry}
+            geometry={(nodes.Model_material0_0_10 as Mesh).geometry}
             material={materials.material0}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.Model_material0_0_11.geometry}
+            geometry={(nodes.Model_material0_0_11 as Mesh).geometry}
             material={materials.material0}
           />
         </group>
