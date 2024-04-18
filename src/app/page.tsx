@@ -29,6 +29,7 @@ export default function HomePage() {
     [0, 0.1, 0.2, 0.3, 0.4, 0.5],
     [0, -50, -120, -200, -260, -300]
   );
+
   return (
     <main>
       <div className='w-screen h-screen relative '>
@@ -37,6 +38,16 @@ export default function HomePage() {
           style={{ opacity, y }}
           className='bg-html fixed h-[150vh] w-screen bg-center bg-no-repeat bg-cover'
         ></motion.div>
+      </div>
+      <div className='overflow-hidden'>
+        <motion.div className='text-white text-[35vh] absolute left-1/2 top-[20vh] font-["Playfair"] italic tracking-tighter -translate-x-1/2 scale-y-150 -skew-x-12'>
+          Anya
+        </motion.div>
+      </div>
+      <div className='overflow-hidden'>
+        <motion.div className='text-white text-[35vh] absolute left-1/2 top-2/3 font-["Playfair"] italic tracking-tighter -translate-x-1/2 scale-y-150 -skew-x-12'>
+          Kalimouline
+        </motion.div>
       </div>
       <section className='h-screen relative '></section>
       <section className='h-screen relative '>
