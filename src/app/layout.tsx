@@ -49,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html className='overflow-x-hidden'>
       <body>{children}</body>
     </html>
   );

@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        html: "url('/images/greek-bg.jpg')",
+      },
       colors: {
         primary: {
           // Customize it on globals.css :root
